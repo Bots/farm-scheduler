@@ -1,63 +1,70 @@
-Twitter Appointment Scheduler
+Farm Scheduler
 Description
 
-Twitter Appointment Scheduler is a Python script that monitors Twitter for tweets containing a specific hashtag. Upon detecting a tweet with the designated hashtag, the script schedules an appointment for viewing. This tool is ideal for professionals who wish to automate their scheduling process based on social media interactions or for anyone interested in creating events triggered by social media activity.
+Farm Scheduler is a Python application that monitors Twitter for tweets containing a specified hashtag. When a tweet with the targeted hashtag is detected, the application schedules an appointment in Google Calendar for the event mentioned in the tweet. This tool provides an innovative way for farm event organizers to automate their event scheduling process based on social media interactions.
 Features
 
-    Watches for tweets with a configurable hashtag
-    Schedules appointments based on tweet content
-    User-friendly and easy to set up
+    Monitors Twitter for a customizable hashtag
+    Automatically schedules appointments in Google Calendar based on the tweet's content
+    Simple configuration and user-friendly setup
 
 Requirements
 
-Before you run the script, make sure you have the following requirements installed:
+Before you can use this script, ensure that you have the following prerequisites installed:
 
     Python 3.x
     Tweepy (A Python library for accessing the Twitter API)
     A Twitter Developer account and API credentials
-    Any additional libraries or tools required for scheduling (e.g., Google Calendar API client if integrating with Google Calendar)
+    Google Calendar API client library
+    OAuth 2.0 credentials for Google Calendar API
 
 Installation
 
+Follow these steps to install Farm Scheduler:
+
     Clone the repository or download the ZIP file and extract it.
-    Navigate to the script's directory in your terminal.
-    Install the required Python dependencies:
+    Open your terminal and navigate to the script's directory.
+    Install the required Python dependencies using pip:
+
+    bash
 
     pip install -r requirements.txt
 
-    Rename the config_sample.py to config.py and fill in your Twitter API credentials and the desired hashtag.
+    Rename config_sample.py to config.py and populate it with your Twitter API credentials, Google Calendar API credentials, and the desired hashtag.
 
 Configuration
 
-Before running the script, you need to configure it. Open the config.py file and set the following variables:
+Edit the config.py file with your specific settings:
 
     CONSUMER_KEY: Your Twitter API consumer key
     CONSUMER_SECRET: Your Twitter API consumer secret
     ACCESS_TOKEN: Your Twitter API access token
     ACCESS_TOKEN_SECRET: Your Twitter API access token secret
-    HASHTAG: The hashtag you want to monitor (e.g., #ScheduleMe)
-    Scheduling settings as per your requirements
+    HASHTAG: The hashtag you want to monitor (e.g., #FarmEvent)
+    Google Calendar API settings as outlined in the API's documentation
 
 Usage
 
-To start the Twitter Appointment Scheduler, run the following command in your terminal:
+Run the Farm Scheduler with the following command:
 
-python twitter_appointment_scheduler.py
+bash
 
-How it Works
+python farm_scheduler.py
 
-The script uses the Tweepy library to listen for live tweets that contain the specified hashtag. Once a tweet is found, the script parses the necessary information and proceeds to interact with your chosen scheduling API or system to set up an appointment.
+How It Works
+
+Farm Scheduler utilizes the Tweepy library to stream live tweets containing the chosen hashtag. Once identified, the tweet is parsed for details about the event, and these details are used to create an appointment in your Google Calendar using Google's Calendar API.
 Contributing
 
-Contributions to enhance Twitter Appointment Scheduler are welcome. Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests.
+If you're interested in contributing to Farm Scheduler, please read the CONTRIBUTING.md file for our contribution guidelines and code of conduct. We appreciate your submissions and feedback.
 License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is distributed under the MIT License. See the LICENSE.md file in the repository for full license text.
 Support
 
-If you have any questions or issues, please open an issue on the GitHub repository, or contact the maintainer directly at [your-email@example.com].
+Should you encounter any issues or have questions, please file an issue on the GitHub project page or contact the maintainer at [your-email@example.com].
 Disclaimer
 
-This script is provided "as is", without warranty of any kind. The author(s) and contributors are not responsible for any damage, misuse, or unexpected behavior that may occur due to the use of this script.
+Farm Scheduler is provided "as is," without warranty of any kind. The authors and contributors shall not be held liable for any damages arising from its use.
 
-Remember to create the necessary CONTRIBUTING.md and LICENSE.md files if you are planning to make the repository public and invite contributions. Adjust the content as needed to match the specifics of your script, such as the details of the scheduling functionality, or the particularities of your configuration process.
+Make sure to actually create and include the CONTRIBUTING.md and LICENSE.md files in your repository. Adjust any sections of the README to fit the details of your project, such as file names, script usage, and contact information. The above is a template and should contain accurate information about your project.
